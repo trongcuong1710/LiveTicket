@@ -1,23 +1,26 @@
 package com.example.liveticket;
 
-import android.R.color;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
+import android.view.*;
+import android.widget.*;
 
 
 public class LoginActivity extends Activity {
 	
 	private Button btnLogin;
+	private EditText txtUserName;
+	private EditText txtpassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.btnLogin = (Button)findViewById(R.id.btnLogin);
-        this.btnLogin.setBackgroundColor(getResources().getColor(color.holo_green_light));        
+        this.txtUserName = (EditText)findViewById(R.id.txtUserName);
+        this.txtpassword = (EditText)findViewById(R.id.txtPassword);
+        
+        this.btnLogin.setEnabled(false);
     }
 
 

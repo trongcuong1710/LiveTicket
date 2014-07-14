@@ -1,4 +1,4 @@
-package RequestApiLib;
+package util;
 
 import java.io.*;
 
@@ -20,6 +20,7 @@ public class ConvertUtil {
 		}
 		catch(IOException e)
 		{
+			e.printStackTrace();
 			throw e;
 		}
 		finally
