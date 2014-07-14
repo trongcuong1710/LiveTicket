@@ -21,6 +21,14 @@ public class LoginActivity extends Activity {
         this.txtpassword = (EditText)findViewById(R.id.txtPassword);
         
         this.btnLogin.setEnabled(false);
+        this.btnLogin.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
     }
 
 
