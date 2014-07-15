@@ -4,8 +4,9 @@ import java.util.*;
 
 import org.apache.http.*;
 
+import Interface.*;
 import RequestApiLib.RestClient.RequestMethod;
-import android.os.AsyncTask;
+import android.os.*;
 
 public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult> 
 {	
@@ -17,13 +18,26 @@ public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult>
 	
 	// request header
 	private ArrayList<NameValuePair> headers;
-	
-	// constructor
-	public RequestAsyncTask(String url, ArrayList<NameValuePair> params, ArrayList<NameValuePair> headers)
+
+    /**
+     * async callback
+     * listen to onPreExecute and onPostExecute
+     */
+    private IAsyncCallBack listener;
+
+    /**
+     * Constructor
+     * @param url : request url
+     * @param params : request parameters
+     * @param headers : request headers
+     * @param listener : callback listener
+     */
+	public RequestAsyncTask(String url, ArrayList<NameValuePair> params, ArrayList<NameValuePair> headers, IAsyncCallBack listener)
 	{
 		this.url = url;
 		this.params = params;
 		this.headers = headers;
+        this.listener = listener;
 	}
 
 	@Override
@@ -33,16 +47,22 @@ public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult>
 		client.setMethod(RequestMethod.POST);
 		
 		// add params
-		for (NameValuePair p : this.params)
-		{
-			client.AddParam(p.getName(), p.getValue());
-		}
+        if (this.params != null)
+        {
+            for (NameValuePair p : this.params)
+            {
+                client.AddParam(p.getName(), p.getValue());
+            }
+        }
 		
 		// add headers
-		for (NameValuePair h : this.headers)
-		{
-			client.AddHeader(h.getName(), h.getValue());
-		}
+        if (this.headers != null)
+        {
+            for (NameValuePair h : this.headers)
+            {
+                client.AddHeader(h.getName(), h.getValue());
+            }
+        }
 		
 		try {
 			client.RequestApi();
@@ -54,4 +74,16 @@ public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult>
 		
 		return new RequestAsyncResult(false, client.Status(), client.Result());
 	}
+
+    @Override
+    protected void onPreExecute()
+    {
+        this.listener.onBeginTask();
+    }
+
+    @Override
+    protected void onPostExecute(RequestAsyncResult result)
+    {
+        this.listener.onTaskComplete(result);
+    }
 }

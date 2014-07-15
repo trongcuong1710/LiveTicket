@@ -1,32 +1,138 @@
 package com.example.liveticket;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.*;
+import android.content.Intent;
+import android.os.*;
+import android.text.*;
 import android.view.*;
 import android.widget.*;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.*;
 
-public class LoginActivity extends Activity {
-	
+import java.util.ArrayList;
+
+import ApiModel.UserModel;
+import Interface.*;
+import Dialog.*;
+import RequestApiLib.RequestAsyncResult;
+import RequestApiLib.RequestAsyncTask;
+
+public class LoginActivity extends Activity implements IAsyncCallBack {
+    /**
+     * button login
+     */
 	private Button btnLogin;
+
+    /**
+     * user name textbox
+     */
 	private EditText txtUserName;
-	private EditText txtpassword;
+
+    /**
+     * password textbox
+     */
+	private EditText txtPassword;
+
+    /**
+     * process dialog
+     */
+    private ProgressDialog loader;
+
+    /**
+     * login url
+     */
+    private final String loginURL = "https://sss-mobile-test.herokuapp.com/login";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onBeginTask() {
+        this.showLoader();
+    }
+
+    @Override
+    public void onTaskComplete(RequestAsyncResult result)
+    {
+        this.dismissLoader();
+
+        /**
+         * prompt when login faile
+         */
+        if (result == null || result.getHasError() == true)
+        {
+            this.promptDialog("Login Failed!", "Please check your user name, password and make sure you're connecting to network.");
+            return;
+        }
+
+        /**
+         * convert result to json object
+         */
+        JSONObject json;
+        try {
+            json = new JSONObject(result.Result());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            this.promptDialog("Error!", "An error has occur, please restart application and try again");
+            return;
+        }
+
+        /**
+         * save user information to shared preference
+         */
+        UserModel user = UserModel.getInstance();
+        try {
+            user.setId(json.getString(UserModel.ID_KEY));
+            user.setUsername(json.getString(UserModel.USER_NAME_KEY));
+            user.setEmail(json.getString(UserModel.EMAIL_KEY));
+            user.setAccess_token(json.getString(UserModel.ACCESS_TOKEN_KEY));
+            user.Update();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            this.promptDialog("Error!", "An error has occur, please restart application and try again");
+            return;
+        }
+
+        Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.btnLogin = (Button)findViewById(R.id.btnLogin);
         this.txtUserName = (EditText)findViewById(R.id.txtUserName);
-        this.txtpassword = (EditText)findViewById(R.id.txtPassword);
-        
-        this.btnLogin.setEnabled(false);
-        this.btnLogin.setOnClickListener(new View.OnClickListener() {
-			
+        this.txtPassword = (EditText)findViewById(R.id.txtPassword);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+        this.btnLogin.setOnClickListener(new View.OnClickListener()
+        {
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v)
+            {
 				// TODO Auto-generated method stub
-				
+				String username = txtUserName.getText().toString().trim();
+                String password = txtPassword.getText().toString().trim();
+
+                if (TextUtils.isEmpty(username))
+                {
+                    promptDialog("Validation Failed!", "Please input user name.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(password))
+                {
+                    promptDialog("Validation Failed!", "Please input password.");
+                    return;
+                }
+
+                ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
+                params.add(new BasicNameValuePair("username", username));
+                params.add(new BasicNameValuePair("password", password));
+
+                RequestAsyncTask request = new RequestAsyncTask(loginURL, params, null, (IAsyncCallBack)LoginActivity.this);
+                request.execute();
 			}
 		});
     }
@@ -49,5 +155,46 @@ public class LoginActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * show loader when perform async process
+     */
+    private void showLoader()
+    {
+        if (this.loader == null)
+        {
+            this.loader = new ProgressDialog(this);
+            this.loader.setTitle("Login process");
+            this.loader.setMessage("Validating user...");
+        }
+
+        this.loader.show();
+    }
+
+    /**
+     * dismiss loader when finish
+     */
+    private void dismissLoader()
+    {
+        if (this.loader == null || !this.loader.isShowing())
+        {
+            return;
+        }
+
+        this.loader.dismiss();
+    }
+
+    /**
+     * prompt dialog
+     * @param title : dialog title
+     * @param message : dialog message
+     */
+    private void promptDialog(String title, String message)
+    {
+        PromptDialog dialog = new PromptDialog();
+        dialog.setTitle(title);
+        dialog.setMessage(message);
+        dialog.show(this.getFragmentManager(), "tag");
     }
 }
