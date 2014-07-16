@@ -4,8 +4,18 @@
     <dataSet config="main" >
         <source path="D:\SVN\LiveTicket\res" >
             <file
+                name="border_edittext"
+                path="D:\SVN\LiveTicket\res\drawable\border_edittext.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="D:\SVN\LiveTicket\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="launcher"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -14,8 +24,18 @@
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
+                name="launcher"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="D:\SVN\LiveTicket\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="launcher"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
@@ -24,13 +44,63 @@
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="launcher"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_base"
+                path="D:\SVN\LiveTicket\res\layout\activity_base.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_login"
                 path="D:\SVN\LiveTicket\res\layout\activity_login.xml"
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_logout"
+                path="D:\SVN\LiveTicket\res\layout\activity_logout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_scanner"
+                path="D:\SVN\LiveTicket\res\layout\activity_scanner.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_startup"
+                path="D:\SVN\LiveTicket\res\layout\activity_startup.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="base"
+                path="D:\SVN\LiveTicket\res\menu\base.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="login"
                 path="D:\SVN\LiveTicket\res\menu\login.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="logout"
+                path="D:\SVN\LiveTicket\res\menu\logout.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="scanner"
+                path="D:\SVN\LiveTicket\res\menu\scanner.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="scanner_avtivity"
+                path="D:\SVN\LiveTicket\res\menu\scanner_avtivity.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="startup"
+                path="D:\SVN\LiveTicket\res\menu\startup.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -51,6 +121,8 @@
                 path="D:\SVN\LiveTicket\res\values\strings.xml"
                 qualifiers="" >
                 <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_base" >BaseActivity
                 </string>
                 <string name="title_activity_scanner_avtivity" >ScannerAvtivity
                 </string>
@@ -115,66 +187,6 @@
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
-            <file
-                name="launcher"
-                path="D:\SVN\LiveTicket\res\drawable-xhdpi\launcher.png"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
-            <file
-                name="launcher"
-                path="D:\SVN\LiveTicket\res\drawable-mdpi\launcher.png"
-                qualifiers="mdpi-v4"
-                type="drawable" />
-            <file
-                name="launcher"
-                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\launcher.png"
-                qualifiers="xxhdpi-v4"
-                type="drawable" />
-            <file
-                name="launcher"
-                path="D:\SVN\LiveTicket\res\drawable-hdpi\launcher.png"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="border_edittext"
-                path="D:\SVN\LiveTicket\res\drawable\border_edittext.xml"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="scanner_avtivity"
-                path="D:\SVN\LiveTicket\res\menu\scanner_avtivity.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="activity_scanner"
-                path="D:\SVN\LiveTicket\res\layout\activity_scanner.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="scanner"
-                path="D:\SVN\LiveTicket\res\menu\scanner.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="activity_logout"
-                path="D:\SVN\LiveTicket\res\layout\activity_logout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="logout"
-                path="D:\SVN\LiveTicket\res\menu\logout.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="activity_startup"
-                path="D:\SVN\LiveTicket\res\layout\activity_startup.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="startup"
-                path="D:\SVN\LiveTicket\res\menu\startup.xml"
-                qualifiers=""
-                type="menu" />
         </source>
         <source path="D:\SVN\LiveTicket\build\generated\res\rs\debug" />
         <source path="D:\SVN\LiveTicket\build\generated\res\generated\debug" />

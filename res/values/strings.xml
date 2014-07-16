@@ -8,5 +8,6 @@
     <string name="title_activity_scanner">ScannerActivity</string>
     <string name="title_activity_logout">LogoutActivity</string>
     <string name="title_activity_startup">StartupActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
 
 </resources>

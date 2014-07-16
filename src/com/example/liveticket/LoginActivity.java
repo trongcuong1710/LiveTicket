@@ -19,7 +19,7 @@ import Dialog.*;
 import RequestApiLib.RequestAsyncResult;
 import RequestApiLib.RequestAsyncTask;
 
-public class LoginActivity extends Activity implements IAsyncCallBack {
+public class LoginActivity extends BaseActivity implements IAsyncCallBack {
     /**
      * button login
      */
@@ -34,11 +34,6 @@ public class LoginActivity extends Activity implements IAsyncCallBack {
      * password textbox
      */
 	private EditText txtPassword;
-
-    /**
-     * process dialog
-     */
-    private ProgressDialog loader;
 
     /**
      * login url
@@ -155,46 +150,5 @@ public class LoginActivity extends Activity implements IAsyncCallBack {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * show loader when perform async process
-     */
-    private void showLoader()
-    {
-        if (this.loader == null)
-        {
-            this.loader = new ProgressDialog(this);
-            this.loader.setTitle("Login process");
-            this.loader.setMessage("Validating user...");
-        }
-
-        this.loader.show();
-    }
-
-    /**
-     * dismiss loader when finish
-     */
-    private void dismissLoader()
-    {
-        if (this.loader == null || !this.loader.isShowing())
-        {
-            return;
-        }
-
-        this.loader.dismiss();
-    }
-
-    /**
-     * prompt dialog
-     * @param title : dialog title
-     * @param message : dialog message
-     */
-    private void promptDialog(String title, String message)
-    {
-        PromptDialog dialog = new PromptDialog();
-        dialog.setTitle(title);
-        dialog.setMessage(message);
-        dialog.show(this.getFragmentManager(), "tag");
     }
 }
