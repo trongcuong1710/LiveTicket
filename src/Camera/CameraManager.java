@@ -1,8 +1,12 @@
 package Camera;
 
 import android.content.Context;
+import android.graphics.*;
 import android.hardware.*;
+import android.hardware.Camera;
 import android.hardware.Camera.*;
+
+import java.io.IOException;
 
 import Interface.IPreviewCallback;
 
@@ -125,6 +129,15 @@ public class CameraManager
             }
 
             this.camera = Camera.open(backId);
+            Camera.Parameters parameters = this.camera.getParameters();
+            parameters.set("orientation", "portrait");
+
+            if (this.context.getPackageManager().hasSystemFeature("android.hardware.camera.autofocus"))
+            {
+                parameters.setFocusMode(Parameters.FOCUS_MODE_AUTO);
+            }
+
+            this.camera.setParameters(parameters);
         }
         catch (Exception e)
         {
@@ -146,5 +159,40 @@ public class CameraManager
     public void startPreview()
     {
         this.camera.startPreview();
+    }
+
+    /**
+     * release camera
+     */
+    public void releaseCamera()
+    {
+        this.camera.stopPreview();
+        this.camera.setPreviewCallback(null);
+        this.cameraPreview.getHolder().removeCallback(this.cameraPreview);
+        this.camera.release();
+        this.camera = null;
+    }
+
+    /**
+     * reconnect camera
+     */
+    public void reconnectCamera() throws Exception
+    {
+        try {
+            this.getCameraInstance();
+            this.cameraPreview = new CameraPreview(this.context, this.camera, this.listener);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    /**
+     * determine whether camera available
+     * @return
+     */
+    public boolean isCameraAvailable()
+    {
+        return (!(this.camera == null));
     }
 }

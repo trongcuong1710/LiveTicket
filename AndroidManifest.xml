@@ -25,27 +25,52 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ScannerActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".LogoutActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liveticket.ScannerActivity" />
         </activity>
         <activity
             android:name=".StartupActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManualInputActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liveticket.ScannerActivity" />
+        </activity>
+        <activity
+            android:name=".ValidActivity"
+            android:label="@string/title_activity_valid" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liveticket.ScannerActivity" />
+        </activity>
+        <activity
+            android:name=".InvalidActivity"
+            android:label="@string/title_activity_invalid" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liveticket.ScannerActivity" />
         </activity>
     </application>
 

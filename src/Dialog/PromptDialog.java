@@ -1,6 +1,7 @@
 package Dialog;
 
 import android.app.*;
+import android.content.DialogInterface;
 import android.os.*;
 
 /**
@@ -11,12 +12,12 @@ public class PromptDialog extends DialogFragment
     /**
      * dialog title
      */
-    private String title;
+    protected String title;
 
     /**
      * dialog message
      */
-    private String message;
+    protected String message;
 
     /**
      * Constructor
@@ -53,12 +54,17 @@ public class PromptDialog extends DialogFragment
      * build dialog to prompt
      * @return built dialog
      */
-    private AlertDialog.Builder buildDialog()
+    protected AlertDialog.Builder buildDialog()
     {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.getActivity());
         builder.setTitle(this.title);
         builder.setMessage(this.message);
-        builder.setPositiveButton(android.R.string.ok, null);
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                PromptDialog.this.getDialog().cancel();
+            }
+        });
 
         return builder;
     }

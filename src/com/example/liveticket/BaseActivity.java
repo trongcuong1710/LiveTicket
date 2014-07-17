@@ -1,6 +1,7 @@
 package com.example.liveticket;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.Menu;
@@ -44,14 +45,16 @@ public abstract class BaseActivity extends Activity
 
     /**
      * show loader when perform async process
+     * @param title : loader title
+     * @param message : loader message
      */
-    protected void showLoader()
+    protected void showLoader(String title, String message)
     {
         if (this.loader == null)
         {
             this.loader = new ProgressDialog(this);
-            this.loader.setTitle("Login process");
-            this.loader.setMessage("Validating user...");
+            this.loader.setTitle(title);
+            this.loader.setMessage(message);
         }
 
         this.loader.show();

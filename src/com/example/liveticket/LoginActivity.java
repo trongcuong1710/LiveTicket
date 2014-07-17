@@ -42,7 +42,7 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
 
     @Override
     public void onBeginTask() {
-        this.showLoader();
+        this.showLoader("Login...", "Validating user...!");
     }
 
     @Override
@@ -89,6 +89,7 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
 
         Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
         startActivity(intent);
+        this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
     }
 
     @Override

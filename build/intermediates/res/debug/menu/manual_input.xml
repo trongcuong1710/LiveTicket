@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.liveticket.ManualInputActivity" >
+</menu>
+<!-- From: file:/D:/SVN/LiveTicket/res/menu/manual_input.xml -->

@@ -16,9 +16,7 @@
 
 package com.google.zxing.common;
 
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-
-import java.util.Vector;
+import java.util.List;
 
 /**
  * <p>Encapsulates the result of decoding a matrix of bits. This typically
@@ -31,13 +29,16 @@ public final class DecoderResult {
 
   private final byte[] rawBytes;
   private final String text;
-  private final Vector byteSegments;
-  private final ErrorCorrectionLevel ecLevel;
+  private final List<byte[]> byteSegments;
+  private final String ecLevel;
+  private Integer errorsCorrected;
+  private Integer erasures;
+  private Object other;
 
-  public DecoderResult(byte[] rawBytes, String text, Vector byteSegments, ErrorCorrectionLevel ecLevel) {
-    if (rawBytes == null && text == null) {
-      throw new IllegalArgumentException();
-    }
+  public DecoderResult(byte[] rawBytes,
+                       String text,
+                       List<byte[]> byteSegments,
+                       String ecLevel) {
     this.rawBytes = rawBytes;
     this.text = text;
     this.byteSegments = byteSegments;
@@ -52,12 +53,36 @@ public final class DecoderResult {
     return text;
   }
 
-  public Vector getByteSegments() {
+  public List<byte[]> getByteSegments() {
     return byteSegments;
   }
 
-  public ErrorCorrectionLevel getECLevel() {
+  public String getECLevel() {
     return ecLevel;
   }
 
+  public Integer getErrorsCorrected() {
+    return errorsCorrected;
+  }
+
+  public void setErrorsCorrected(Integer errorsCorrected) {
+    this.errorsCorrected = errorsCorrected;
+  }
+
+  public Integer getErasures() {
+    return erasures;
+  }
+
+  public void setErasures(Integer erasures) {
+    this.erasures = erasures;
+  }
+  
+  public Object getOther() {
+    return other;
+  }
+
+  public void setOther(Object other) {
+    this.other = other;
+  }
+  
 }

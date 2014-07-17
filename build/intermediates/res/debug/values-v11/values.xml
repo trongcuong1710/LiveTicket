@@ -7,5 +7,13 @@
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
+    <!-- From: file:/D:/SVN/LiveTicket/res/values-v11/themes.xml -->
+    <eat-comment />
+
+    <style name="MyAppTheme" parent="@android:style/Theme.Holo.Light">
+        <!-- Any customizations for your app running on 3.0+ devices here -->
+    </style>
+
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar"></style>
 
 </resources>

@@ -4,6 +4,26 @@
     <dataSet config="main" >
         <source path="D:\SVN\LiveTicket\res" >
             <file
+                name="slide_in_left"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_left.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_in_right"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_right.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_left"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_left.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_right"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_right.xml"
+                qualifiers=""
+                type="anim" />
+            <file
                 name="border_edittext"
                 path="D:\SVN\LiveTicket\res\drawable\border_edittext.xml"
                 qualifiers=""
@@ -54,6 +74,11 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_invalid"
+                path="D:\SVN\LiveTicket\res\layout\activity_invalid.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_login"
                 path="D:\SVN\LiveTicket\res\layout\activity_login.xml"
                 qualifiers=""
@@ -61,6 +86,11 @@
             <file
                 name="activity_logout"
                 path="D:\SVN\LiveTicket\res\layout\activity_logout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_manual_input"
+                path="D:\SVN\LiveTicket\res\layout\activity_manual_input.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -74,8 +104,18 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_valid"
+                path="D:\SVN\LiveTicket\res\layout\activity_valid.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="base"
                 path="D:\SVN\LiveTicket\res\menu\base.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="invalid"
+                path="D:\SVN\LiveTicket\res\menu\invalid.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -89,18 +129,23 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="manual_input"
+                path="D:\SVN\LiveTicket\res\menu\manual_input.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="scanner"
                 path="D:\SVN\LiveTicket\res\menu\scanner.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                name="scanner_avtivity"
-                path="D:\SVN\LiveTicket\res\menu\scanner_avtivity.xml"
+                name="startup"
+                path="D:\SVN\LiveTicket\res\menu\startup.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                name="startup"
-                path="D:\SVN\LiveTicket\res\menu\startup.xml"
+                name="valid"
+                path="D:\SVN\LiveTicket\res\menu\valid.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -120,11 +165,17 @@
             <file
                 path="D:\SVN\LiveTicket\res\values\strings.xml"
                 qualifiers="" >
+                <string name="title_activity_invalid" >InvalidActivity
+                </string>
                 <string name="action_settings" >Settings
                 </string>
                 <string name="title_activity_base" >BaseActivity
                 </string>
                 <string name="title_activity_scanner_avtivity" >ScannerAvtivity
+                </string>
+                <string name="title_activity_manual_input" >ManualInputActivity
+                </string>
+                <string name="title_activity_valid" >ValidActivity
                 </string>
                 <string name="app_name" >LiveTicket
                 </string>
@@ -160,6 +211,22 @@
                 </style>
             </file>
             <file
+                path="D:\SVN\LiveTicket\res\values\themes.xml"
+                qualifiers="" >
+
+                <style
+                    name="MyAppTheme"
+                    parent="@android:style/Theme.Light" >
+
+                    <!-- Any customizations for your app running on pre-3.0 devices here -->
+                </style>
+
+                <style
+                    name="NoActionBar"
+                    parent="@android:style/Theme.Light.NoTitleBar" >
+                </style>
+            </file>
+            <file
                 path="D:\SVN\LiveTicket\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
@@ -171,6 +238,22 @@
                 </style>
             </file>
             <file
+                path="D:\SVN\LiveTicket\res\values-v11\themes.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="MyAppTheme"
+                    parent="@android:style/Theme.Holo.Light" >
+
+                    <!-- Any customizations for your app running on 3.0+ devices here -->
+                </style>
+
+                <style
+                    name="NoActionBar"
+                    parent="@android:style/Theme.Holo.Light.NoActionBar" >
+                </style>
+            </file>
+            <file
                 path="D:\SVN\LiveTicket\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
@@ -179,6 +262,22 @@
                     parent="android:Theme.Holo.Light.DarkActionBar" >
 
                     <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="D:\SVN\LiveTicket\res\values-v14\themes.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="MyAppTheme"
+                    parent="@android:style/Theme.Holo.Light" >
+
+                    <!-- Any customizations for your app running on 4.0+ devices here -->
+                </style>
+
+                <style
+                    name="NoActionBar"
+                    parent="@android:style/Theme.Holo.Light.NoActionBar" >
                 </style>
             </file>
             <file
