@@ -2,8 +2,8 @@
 <pre-dex-items>
 
     <item
-        dex="E:\SVN\LiveTicket\build\intermediates\pre-dexed\debug\android-support-v4-439e2d02772c3a14f26024bc87b7ca5262c3e442.jar"
-        jar="E:\SVN\LiveTicket\libs\android-support-v4.jar"
+        dex="D:\SVN\LiveTicket\build\intermediates\pre-dexed\debug\android-support-v4-9d2a5a8d118d3d266272f4e7a2bc417e43b9ab7f.jar"
+        jar="D:\SVN\LiveTicket\libs\android-support-v4.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="efec67655f6db90757faa37201efcee2a9ec3507"/>

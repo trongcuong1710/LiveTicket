@@ -49,7 +49,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         try
         {
             //this.camera.setPreviewDisplay(holder);
-            this.camera.setDisplayOrientation(90);
             this.camera.startPreview();
             this.setPreviewCallbackListener();
         }
@@ -79,7 +78,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         try
         {
             this.camera.setPreviewDisplay(this.surfaceHolder);
-            this.camera.setDisplayOrientation(90);
             this.camera.startPreview();
             this.setPreviewCallbackListener();
         }

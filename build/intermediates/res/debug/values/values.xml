@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/E:/SVN/LiveTicket/res/values/colors_apptheme.xml -->
+    <!-- From: file:/D:/SVN/LiveTicket/res/values/colors_apptheme.xml -->
     <eat-comment />
 
     <color name="apptheme_color">#99cc00</color>
-    <!-- From: file:/E:/SVN/LiveTicket/res/values/dimens.xml -->
+    <!-- From: file:/D:/SVN/LiveTicket/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/E:/SVN/LiveTicket/res/values/strings.xml -->
+    <!-- From: file:/D:/SVN/LiveTicket/res/values/strings.xml -->
     <eat-comment />
 
     <string name="access_token_request_parameter">access_token</string>
@@ -47,7 +47,7 @@
     <string name="user_name_request_parameter">username</string>
     <string name="user_name_validation_failed_message">Please input user name.</string>
     <string name="validation_failed_title">Validation Failed!</string>
-    <!-- From: file:/E:/SVN/LiveTicket/res/values/styles.xml -->
+    <!-- From: file:/D:/SVN/LiveTicket/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
@@ -61,7 +61,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/E:/SVN/LiveTicket/res/values/themes.xml -->
+    <!-- From: file:/D:/SVN/LiveTicket/res/values/themes.xml -->
     <eat-comment />
 
     <style name="MyAppTheme" parent="@android:style/Theme.Light">
