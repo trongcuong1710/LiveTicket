@@ -1,5 +1,6 @@
 package com.example.liveticket;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -99,14 +100,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
 
         if (!TextUtils.isEmpty(decodedString))
         {
-            this.cameraManager.stopPreview();
-
-            ArrayList<NameValuePair> requestParams = new ArrayList<NameValuePair>();
-            requestParams.add(new BasicNameValuePair(this.getString(R.string.code_request_parameter), decodedString));
-            requestParams.add(new BasicNameValuePair(this.getString(R.string.access_token_request_parameter), App.USER_INFO().getAccess_token()));
-
-            RequestAsyncTask requestAsyncTask = new RequestAsyncTask(this.getString(R.string.scan_url), requestParams, null, this);
-            requestAsyncTask.execute();
+            this.requestServer(decodedString);
         }
     }
 
@@ -114,7 +108,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
     public void onPause()
     {
         super.onPause();
-        //this.frame.removeView(this.cameraManager.getCameraPreview());
+        this.frame.removeView(this.cameraManager.getCameraPreview());
         this.cameraManager.releaseCamera();
     }
 
@@ -196,5 +190,21 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
 
         /*Intent intent = new Intent(this.getBaseContext(), ValidActivity.class);
         this.startActivity(intent);*/
+    }
+
+    /**
+     * request ticket information from server
+     * @param decodedString
+     */
+    private void requestServer(String decodedString)
+    {
+        this.cameraManager.stopPreview();
+
+        ArrayList<NameValuePair> requestParams = new ArrayList<NameValuePair>();
+        requestParams.add(new BasicNameValuePair(this.getString(R.string.code_request_parameter), decodedString));
+        requestParams.add(new BasicNameValuePair(this.getString(R.string.access_token_request_parameter), App.USER_INFO().getAccess_token()));
+
+        RequestAsyncTask requestAsyncTask = new RequestAsyncTask(this.getString(R.string.scan_url), requestParams, null, this);
+        requestAsyncTask.execute();
     }
 }

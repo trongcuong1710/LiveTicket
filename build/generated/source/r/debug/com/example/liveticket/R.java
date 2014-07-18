@@ -51,6 +51,7 @@ public final class R {
         public static final int btnSend=0x7f0a0009;
         public static final int imageView1=0x7f0a0002;
         public static final int invalidLayout=0x7f0a0000;
+        public static final int logout=0x7f0a0010;
         public static final int logoutTextView=0x7f0a0006;
         public static final int previewFrame=0x7f0a000c;
         public static final int textView2=0x7f0a000b;

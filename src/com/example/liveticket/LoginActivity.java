@@ -48,7 +48,7 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
         /**
          * prompt when login failed
          */
-        if (result == null || result.getHasError() == true)
+        if (result == null || result.getHasError() == true || result.StatusCode() != 200)
         {
             this.promptDialog(this.getString(R.string.login_failed_title), this.getString(R.string.login_failed_message));
             return;

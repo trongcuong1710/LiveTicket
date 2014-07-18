@@ -67,12 +67,12 @@
     <!-- login activity UI -->
     <string name="user_name_edit_text_hint">user name</string>
     <string name="password_edit_text_hint">password</string>
-    <string name="login_button_text">Login</string>
+    <string name="login_button_text">Log in</string>
     <!-- login activity UI -->
 
     <!-- logout activity UI -->
-    <string name="logout_button_text">Logout</string>
-    <string name="logout_activity_title">Logout</string>
+    <string name="logout_button_text">Log out</string>
+    <string name="logout_activity_title">Log out</string>
     <!-- logout activity UI -->
 
     <!-- manual input activity UI -->
@@ -86,4 +86,17 @@
     <string name="scanner_button_text">Enter Code Manually</string>
     <string name="scanner_activity_title">Scan</string>
     <!-- scanner activity UI -->
+
+    <!-- valid activity UI -->
+    <string name="valid_title">VALID</string>
+    <!-- valid activity UI -->
+
+    <!-- valid / invalid activity common UI -->
+    <string name="button_scan_next_ticket">Scan next ticket</string>
+    <!-- valid / invalid activity common UI -->
+
+    <!-- invalid activity UI -->
+    <string name="invalid_title">INVALID</string>
+    <string name="invalid_message">Error message from API response</string>
+    <!-- invalid activity UI -->
 </resources>

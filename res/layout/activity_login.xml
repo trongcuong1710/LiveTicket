@@ -12,22 +12,11 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="36dp"
         android:src="@drawable/liveticket_logo"
         android:contentDescription="logo image"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/txtUserName" />
-
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/password_edit_text_hint"
-        android:inputType="textPassword"
-        android:layout_below="@+id/txtUserName"
-        android:layout_alignLeft="@+id/txtUserName"
-        android:layout_marginTop="22dp" />
 
     <EditText
         android:id="@+id/txtUserName"
@@ -39,6 +28,17 @@
         android:layout_marginTop="15dp"
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password_edit_text_hint"
+        android:inputType="textPassword"
+        android:layout_below="@+id/txtUserName"
+        android:layout_alignLeft="@+id/txtUserName"
+        android:layout_marginTop="22dp" />
 
     <Button
         android:id="@+id/btnLogin"

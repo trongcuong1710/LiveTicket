@@ -1,5 +1,6 @@
 package ApiModel;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import SharedPreference.SharedPreferenceManager;
 
@@ -160,12 +161,7 @@ public class UserModel
         this.email = "";
         this.access_token = "";
 
-        SharedPreferences preferences = SharedPreferenceManager.getPreference(this.SHARE_PREFERENCE_NAME);
-
-        if (preferences != null)
-        {
-           SharedPreferenceManager.Clear(preferences);
-        }
+        SharedPreferenceManager.Clear(this.SHARE_PREFERENCE_NAME);
     }
 
     /**

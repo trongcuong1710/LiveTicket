@@ -1,6 +1,7 @@
 package com.example.liveticket;
 
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,8 @@ public class InvalidActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invalid);
+
+        this.getWindow().getDecorView().setBackgroundColor(Color.rgb(207, 42, 39));
 
         this.mainLayout = (RelativeLayout)this.findViewById(R.id.invalidLayout);
         this.mainLayout.setOnClickListener(new View.OnClickListener() {

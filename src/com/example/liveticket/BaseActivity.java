@@ -53,7 +53,7 @@ public abstract class BaseActivity extends Activity
     {
         if (this.loader == null)
         {
-            this.loader = new ProgressDialog(this);
+            this.loader = new ProgressDialog(BaseActivity.this);
             this.loader.setTitle(title);
             this.loader.setMessage(message);
         }

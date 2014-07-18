@@ -59,15 +59,17 @@ public class SharedPreferenceManager
 
     /**
      * clear shared preference
-     * @param preferences
+     * @param name
      */
-    public static void Clear(SharedPreferences preferences)
+    public static void Clear(String name)
     {
+        SharedPreferences preferences = getPreference(name);
+
         if (preferences == null)
             return;
 
-        preferences.edit().clear();
-        preferences.edit().commit();
+        preferences.edit().clear().commit();
+        deleteFile("/data/data/" + App.getContext().getPackageName() +  "/shared_prefs/"  + name + ".xml");
     }
 
     /**
@@ -78,5 +80,19 @@ public class SharedPreferenceManager
     public static SharedPreferences Create(String name)
     {
         return App.getContext().getSharedPreferences(name, Context.MODE_PRIVATE);
+    }
+
+    /**
+     * delete file
+     * @param pathToFile
+     * @throws IOException
+     */
+    private static void deleteFile(String pathToFile) {
+        File file = new File(pathToFile);
+        if (file.delete() == false) {
+            return;
+        }
+
+        file.delete();
     }
 }
