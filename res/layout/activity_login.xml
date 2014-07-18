@@ -6,7 +6,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/NoActionBar"
     tools:context="com.example.liveticket.LoginActivity" >
 
     <ImageView
@@ -14,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/liveticket_logo"
         android:contentDescription="logo image"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/txtUserName" />
@@ -24,17 +23,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="your password"
+        android:hint="@string/password_edit_text_hint"
         android:inputType="textPassword"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/txtUserName"
+        android:layout_alignLeft="@+id/txtUserName"
+        android:layout_marginTop="22dp" />
 
     <EditText
         android:id="@+id/txtUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="your username"
+        android:hint="@string/user_name_edit_text_hint"
         android:inputType="textPersonName"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/imageView1"
@@ -43,11 +43,13 @@
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
+        android:layout_height="45dp"
+        android:text="@string/login_button_text"
         android:layout_marginTop="21dp"
         android:layout_below="@+id/txtPassword"
         android:layout_alignRight="@+id/txtPassword"
-        android:layout_alignLeft="@+id/txtPassword" />
+        android:layout_alignLeft="@+id/txtPassword"
+        android:background="@drawable/primary_button"
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>

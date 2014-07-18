@@ -3,6 +3,9 @@ package com.example.liveticket;
 import android.app.*;
 import android.content.*;
 
+import ApiModel.UserModel;
+import Camera.CameraManager;
+
 /**
  * Created by DFS on 7/15/2014.
  */
@@ -29,6 +32,15 @@ public class App extends Application
     public static Context getContext()
     {
         return instance.getApplicationContext();
+    }
+
+    /**
+     * user infomation
+     * @return
+     */
+    public static UserModel USER_INFO()
+    {
+        return UserModel.getInstance();
     }
 
     @Override

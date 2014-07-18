@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import ApiModel.UserModel;
 import Interface.*;
-import Dialog.*;
+import  Enum.*;
 import RequestApiLib.RequestAsyncResult;
 import RequestApiLib.RequestAsyncTask;
 
@@ -35,14 +35,9 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
      */
 	private EditText txtPassword;
 
-    /**
-     * login url
-     */
-    private final String loginURL = "https://sss-mobile-test.herokuapp.com/login";
-
     @Override
     public void onBeginTask() {
-        this.showLoader("Login...", "Validating user...!");
+        this.showLoader(this.getString(R.string.login_loader_title), this.getString(R.string.login_loader_message));
     }
 
     @Override
@@ -51,11 +46,11 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
         this.dismissLoader();
 
         /**
-         * prompt when login faile
+         * prompt when login failed
          */
         if (result == null || result.getHasError() == true)
         {
-            this.promptDialog("Login Failed!", "Please check your user name, password and make sure you're connecting to network.");
+            this.promptDialog(this.getString(R.string.login_failed_title), this.getString(R.string.login_failed_message));
             return;
         }
 
@@ -67,29 +62,30 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
             json = new JSONObject(result.Result());
         } catch (JSONException e) {
             e.printStackTrace();
-            this.promptDialog("Error!", "An error has occur, please restart application and try again");
+            this.promptDialog(this.getString(R.string.common_error_title), this.getString(R.string.common_error_message));
             return;
         }
 
         /**
          * save user information to shared preference
          */
-        UserModel user = UserModel.getInstance();
         try {
-            user.setId(json.getString(UserModel.ID_KEY));
-            user.setUsername(json.getString(UserModel.USER_NAME_KEY));
-            user.setEmail(json.getString(UserModel.EMAIL_KEY));
-            user.setAccess_token(json.getString(UserModel.ACCESS_TOKEN_KEY));
-            user.Update();
+            App.USER_INFO().setId(json.getString(UserModel.ID_KEY));
+            App.USER_INFO().setUsername(json.getString(UserModel.USER_NAME_KEY));
+            App.USER_INFO().setEmail(json.getString(UserModel.EMAIL_KEY));
+            App.USER_INFO().setAccess_token(json.getString(UserModel.ACCESS_TOKEN_KEY));
+            App.USER_INFO().Update();
         } catch (JSONException e) {
             e.printStackTrace();
             this.promptDialog("Error!", "An error has occur, please restart application and try again");
             return;
         }
 
-        Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
+        this.navigateToActivity(ScannerActivity.class, AnimationDirection.LEFT);
+
+        /*Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
         startActivity(intent);
-        this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);*/
     }
 
     @Override
@@ -100,8 +96,6 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
         this.btnLogin = (Button)findViewById(R.id.btnLogin);
         this.txtUserName = (EditText)findViewById(R.id.txtUserName);
         this.txtPassword = (EditText)findViewById(R.id.txtPassword);
-        ActionBar actionBar = getActionBar();
-        actionBar.hide();
         this.btnLogin.setOnClickListener(new View.OnClickListener()
         {
 			@Override
@@ -113,21 +107,21 @@ public class LoginActivity extends BaseActivity implements IAsyncCallBack {
 
                 if (TextUtils.isEmpty(username))
                 {
-                    promptDialog("Validation Failed!", "Please input user name.");
+                    LoginActivity.this.promptDialog(LoginActivity.this.getString(R.string.validation_failed_title), LoginActivity.this.getString(R.string.user_name_validation_failed_message));
                     return;
                 }
 
                 if (TextUtils.isEmpty(password))
                 {
-                    promptDialog("Validation Failed!", "Please input password.");
+                    LoginActivity.this.promptDialog(LoginActivity.this.getString(R.string.validation_failed_title), LoginActivity.this.getString(R.string.password_validation_failed_message));
                     return;
                 }
 
                 ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
-                params.add(new BasicNameValuePair("username", username));
-                params.add(new BasicNameValuePair("password", password));
+                params.add(new BasicNameValuePair(LoginActivity.this.getString(R.string.user_name_request_parameter), username));
+                params.add(new BasicNameValuePair(LoginActivity.this.getString(R.string.password_request_parameter), password));
 
-                RequestAsyncTask request = new RequestAsyncTask(loginURL, params, null, (IAsyncCallBack)LoginActivity.this);
+                RequestAsyncTask request = new RequestAsyncTask(LoginActivity.this.getString(R.string.login_url), params, null, LoginActivity.this);
                 request.execute();
 			}
 		});

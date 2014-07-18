@@ -1,7 +1,7 @@
 package com.example.liveticket;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -10,21 +10,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import com.example.liveticket.R;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-import ApiModel.UserModel;
 import Camera.CameraManager;
 import Interface.IAsyncCallBack;
 import Interface.IPreviewCallback;
 import RequestApiLib.RequestAsyncResult;
 import RequestApiLib.RequestAsyncTask;
 import util.ConvertUtil;
+import Enum.*;
 
 public class ScannerActivity extends BaseActivity implements IPreviewCallback, IAsyncCallBack
 {
@@ -43,20 +40,12 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
      */
     private Button btnManuallInput;
 
-    /**
-     * request url
-     */
-    private final String REQUEST_URL = "https://sss-mobile-test.herokuapp.com/scan";
-
-    /**
-     * user info
-     */
-    private UserModel user = UserModel.getInstance();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
+
+        this.getWindow().getDecorView().setBackgroundColor(Color.rgb(119, 148, 186));
 
         try
         {
@@ -68,16 +57,18 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
         catch (Exception e)
         {
             e.printStackTrace();
-            this.promptDialog("Error!", "Cannot access camera!");
+            this.promptDialog(this.getString(R.string.common_error_title), this.getString(R.string.camera_access_error));
         }
 
         this.btnManuallInput = (Button)this.findViewById(R.id.btnInput);
         this.btnManuallInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ScannerActivity.this.getBaseContext(), ManualInputActivity.class);
+                ScannerActivity.this.navigateToActivity(ManualInputActivity.class, AnimationDirection.LEFT);
+
+                /*Intent intent = new Intent(ScannerActivity.this.getBaseContext(), ManualInputActivity.class);
                 ScannerActivity.this.startActivity(intent);
-                ScannerActivity.this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                ScannerActivity.this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);*/
             }
         });
     }
@@ -111,10 +102,10 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
             this.cameraManager.stopPreview();
 
             ArrayList<NameValuePair> requestParams = new ArrayList<NameValuePair>();
-            requestParams.add(new BasicNameValuePair("code", decodedString));
-            requestParams.add(new BasicNameValuePair("access_token", this.user.getAccess_token()));
+            requestParams.add(new BasicNameValuePair(this.getString(R.string.code_request_parameter), decodedString));
+            requestParams.add(new BasicNameValuePair(this.getString(R.string.access_token_request_parameter), App.USER_INFO().getAccess_token()));
 
-            RequestAsyncTask requestAsyncTask = new RequestAsyncTask(this.REQUEST_URL, requestParams, null, this);
+            RequestAsyncTask requestAsyncTask = new RequestAsyncTask(this.getString(R.string.scan_url), requestParams, null, this);
             requestAsyncTask.execute();
         }
     }
@@ -123,7 +114,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
     public void onPause()
     {
         super.onPause();
-        this.frame.removeView(this.cameraManager.getCameraPreview());
+        //this.frame.removeView(this.cameraManager.getCameraPreview());
         this.cameraManager.releaseCamera();
     }
 
@@ -138,7 +129,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
         catch (Exception e)
         {
             e.printStackTrace();
-            this.promptDialog("Error!", "Can not reconnect camera!");
+            this.promptDialog(this.getString(R.string.common_error_title), this.getString(R.string.camera_access_error));
         }
     }
 
@@ -177,7 +168,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
     @Override
     public void onBeginTask()
     {
-        this.showLoader("Please wait...!", "Requesting ticket information from server...!");
+        this.showLoader(this.getString(R.string.scan_loader_title), this.getString(R.string.scan_loader_message));
     }
 
     @Override
@@ -187,13 +178,23 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
 
         if (result.getHasError() || result.StatusCode() != 200)
         {
-            Intent intent = new Intent(this.getBaseContext(), InvalidActivity.class);
-            this.startActivity(intent);
+            /**
+             * navigate to invalid activity
+             */
+            this.navigateToActivity(InvalidActivity.class, AnimationDirection.DOWN);
+
+            /*Intent intent = new Intent(this.getBaseContext(), InvalidActivity.class);
+            this.startActivity(intent);*/
+
             return;
         }
 
-        Intent intent = new Intent(this.getBaseContext(), ValidActivity.class);
-        this.startActivity(intent);
-        return;
+        /**
+         * navigate to valid activity
+         */
+        this.navigateToActivity(ValidActivity.class, AnimationDirection.DOWN);
+
+        /*Intent intent = new Intent(this.getBaseContext(), ValidActivity.class);
+        this.startActivity(intent);*/
     }
 }

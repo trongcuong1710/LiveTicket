@@ -1,14 +1,15 @@
 package com.example.liveticket;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.liveticket.R;
 
 import Dialog.PromptDialog;
+import Enum.*;
 
 public abstract class BaseActivity extends Activity
 {
@@ -84,5 +85,52 @@ public abstract class BaseActivity extends Activity
         dialog.setTitle(title);
         dialog.setMessage(message);
         dialog.show(this.getFragmentManager(), "tag");
+    }
+
+    /**
+     * navigate to a specific activity
+     * @param cls : activity to navigate to
+     * @param animationDirection : animation direction
+     */
+    protected void navigateToActivity(Class<?> cls, AnimationDirection animationDirection)
+    {
+        Intent intent = new Intent(this.getBaseContext(), cls);
+        startActivity(intent);
+
+        this.overrideAnimation(animationDirection);
+    }
+
+    /**
+     * navigate back to parent activity
+     * @param animationDirection
+     */
+    protected void navigateBackToParent(AnimationDirection animationDirection)
+    {
+        NavUtils.navigateUpFromSameTask(this);
+
+        this.overrideAnimation(animationDirection);
+    }
+
+    /**
+     * override pending transition
+     * @param animationDirection
+     */
+    protected void overrideAnimation(AnimationDirection animationDirection)
+    {
+        switch (animationDirection)
+        {
+            case UP:
+                this.overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                break;
+            case RIGHT:
+                this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+            case DOWN:
+                this.overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_down);
+                break;
+            case LEFT:
+                this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                break;
+        }
     }
 }

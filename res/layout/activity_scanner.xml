@@ -2,22 +2,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.example.liveticket.ScannerActivity"
-    android:theme="@style/MyAppTheme">
+    tools:context="com.example.liveticket.ScannerActivity">
 
     <Button
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Enter Code Manually"
+        android:layout_height="45dp"
+        android:text="@string/scanner_button_text"
         android:id="@+id/btnInput"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/manual_scan_button"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hold QR code about 20cm from your phone"
+        android:text="@string/scanner_text_view"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

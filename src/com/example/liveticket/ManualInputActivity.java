@@ -1,10 +1,7 @@
 package com.example.liveticket;
 
 import android.app.ActionBar;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,17 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.liveticket.R;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
 
-import ApiModel.UserModel;
 import Interface.IAsyncCallBack;
 import RequestApiLib.RequestAsyncResult;
 import RequestApiLib.RequestAsyncTask;
+import Enum.*;
 
 public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
 {
@@ -41,16 +36,6 @@ public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
      */
     private EditText txtCode;
 
-    /**
-     * user model
-     */
-    private UserModel user = UserModel.getInstance();
-
-    /**
-     * request URL
-     */
-    private final String REQUEST_URL = "https://sss-mobile-test.herokuapp.com/scan";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,15 +51,15 @@ public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
 
                 if (TextUtils.isEmpty(code))
                 {
-                   ManualInputActivity.this.promptDialog("Validation Failed!", "Please input code!");
+                   ManualInputActivity.this.promptDialog(ManualInputActivity.this.getString(R.string.validation_failed_title), ManualInputActivity.this.getString(R.string.manual_input_code_validation_failed));
                    return;
                 }
 
                 ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
-                params.add(new BasicNameValuePair("code", code));
-                params.add(new BasicNameValuePair("access_token", ManualInputActivity.this.user.getAccess_token()));
+                params.add(new BasicNameValuePair(ManualInputActivity.this.getString(R.string.code_request_parameter), code));
+                params.add(new BasicNameValuePair(ManualInputActivity.this.getString(R.string.access_token_request_parameter), App.USER_INFO().getAccess_token()));
 
-                RequestAsyncTask requestAsyncTask = new RequestAsyncTask(ManualInputActivity.this.REQUEST_URL, params, null, ManualInputActivity.this);
+                RequestAsyncTask requestAsyncTask = new RequestAsyncTask(ManualInputActivity.this.getString(R.string.scan_url), params, null, ManualInputActivity.this);
                 requestAsyncTask.execute();
             }
         });
@@ -98,8 +83,11 @@ public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
-            this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+            this.navigateBackToParent(AnimationDirection.RIGHT);
+
+            /*NavUtils.navigateUpFromSameTask(this);
+            this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);*/
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -107,7 +95,7 @@ public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
 
     @Override
     public void onBeginTask() {
-        this.showLoader("Please wait...", "Request ticket information from server...!");
+        this.showLoader(this.getString(R.string.scan_loader_title), this.getString(R.string.scan_loader_message));
     }
 
     @Override
@@ -119,15 +107,20 @@ public class ManualInputActivity extends BaseActivity implements IAsyncCallBack
             /**
              * redirect to invalid page
              */
-            Intent intent = new Intent(this.getBaseContext(), InvalidActivity.class);
-            this.startActivity(intent);
+            this.navigateToActivity(InvalidActivity.class, AnimationDirection.DOWN);
+
+            /*Intent intent = new Intent(this.getBaseContext(), InvalidActivity.class);
+            this.startActivity(intent);*/
+
             return;
         }
 
         /**
          * redirect to valid page
          */
-        Intent intent = new Intent(this.getBaseContext(), ValidActivity.class);
-        this.startActivity(intent);
+        this.navigateToActivity(ValidActivity.class, AnimationDirection.DOWN);
+
+        /*Intent intent = new Intent(this.getBaseContext(), ValidActivity.class);
+        this.startActivity(intent);*/
     }
 }

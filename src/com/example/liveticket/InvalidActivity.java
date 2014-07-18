@@ -1,23 +1,15 @@
 package com.example.liveticket;
 
 import android.app.ActionBar;
-import android.app.Activity;
-import android.drm.DrmStore;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.example.liveticket.R;
+import Enum.*;
 
-public class InvalidActivity extends Activity {
-    /**
-     * action bar
-      */
-    private ActionBar actionBar;
-
+public class InvalidActivity extends BaseActivity {
     /**
      * main layout
      */
@@ -28,14 +20,11 @@ public class InvalidActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invalid);
 
-        this.actionBar = this.getActionBar();
-        this.actionBar.hide();
-
         this.mainLayout = (RelativeLayout)this.findViewById(R.id.invalidLayout);
         this.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavUtils.navigateUpFromSameTask(InvalidActivity.this);
+                InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);
             }
         });
     }

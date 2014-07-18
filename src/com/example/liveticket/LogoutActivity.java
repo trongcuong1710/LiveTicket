@@ -1,11 +1,8 @@
 package com.example.liveticket;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.DialogFragment;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,11 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import ApiModel.UserModel;
 import Dialog.ConfirmDialog;
 import Interface.IConfirmDialog;
+import Enum.*;
 
-public class LogoutActivity extends Activity implements IConfirmDialog
+public class LogoutActivity extends BaseActivity implements IConfirmDialog
 {
     /**
      * logout button
@@ -30,11 +27,6 @@ public class LogoutActivity extends Activity implements IConfirmDialog
     private TextView textView;
 
     /**
-     * user model
-     */
-    private UserModel user = UserModel.getInstance();
-
-    /**
      * action bar
      */
     private ActionBar actionBar;
@@ -45,7 +37,7 @@ public class LogoutActivity extends Activity implements IConfirmDialog
         setContentView(R.layout.activity_logout);
 
         this.textView = (TextView)this.findViewById(R.id.logoutTextView);
-        this.textView.setText(Html.fromHtml("Login as: " + "<b>" + user.getUsername() + "</b>"));
+        this.textView.setText(Html.fromHtml(this.getString(R.string.logout_textview_content) + "<b>" + App.USER_INFO().getUsername() + "</b>"));
 
         this.btnLogout = (Button)this.findViewById(R.id.btnLogout);
         this.btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +66,11 @@ public class LogoutActivity extends Activity implements IConfirmDialog
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
-            this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+            this.navigateBackToParent(AnimationDirection.RIGHT);
+
+            /*NavUtils.navigateUpFromSameTask(this);
+            this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);*/
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -87,9 +82,11 @@ public class LogoutActivity extends Activity implements IConfirmDialog
         /**
          * logout and redirect to login activity when user confirmed
          */
-        user.Logout();
-        Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-        startActivity(intent);
+        App.USER_INFO().Logout();
+        this.navigateToActivity(LoginActivity.class, AnimationDirection.RIGHT);
+
+        /*Intent intent = new Intent(getBaseContext(), LoginActivity.class);
+        startActivity(intent);*/
     }
 
     @Override
@@ -106,8 +103,8 @@ public class LogoutActivity extends Activity implements IConfirmDialog
     protected void confirmDialog()
     {
         ConfirmDialog dialog = new ConfirmDialog();
-        dialog.setTitle("Confirm!");
-        dialog.setMessage("Do you really want to log out?");
+        dialog.setTitle(this.getString(R.string.logout_confirm_title));
+        dialog.setMessage(this.getString(R.string.logout_confirm_message));
         dialog.show(this.getFragmentManager(), "tag");
     }
 }

@@ -6,4 +6,7 @@
     <style name="NoActionBar" parent="@android:style/Theme.Light.NoTitleBar">
 
     </style>
+    <style name="MyAppTheme.Fullscreen" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+    </style>
 </resources>

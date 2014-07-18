@@ -25,17 +25,20 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
         </activity>
         <activity
             android:name=".ScannerActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:label="@string/scanner_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
         </activity>
         <activity
             android:name=".LogoutActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:label="@string/logout_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.liveticket.ScannerActivity" />
@@ -52,22 +55,23 @@
         </activity>
         <activity
             android:name=".ManualInputActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:label="@string/manual_input_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.liveticket.ScannerActivity" />
         </activity>
         <activity
             android:name=".ValidActivity"
-            android:label="@string/title_activity_valid" >
+            android:theme="@style/MyAppTheme.Fullscreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.liveticket.ScannerActivity" />
         </activity>
         <activity
             android:name=".InvalidActivity"
-            android:label="@string/title_activity_invalid" >
+            android:theme="@style/MyAppTheme.Fullscreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.liveticket.ScannerActivity" />
