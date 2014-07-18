@@ -106,7 +106,7 @@ public abstract class BaseActivity extends Activity
      */
     protected void navigateBackToParent(AnimationDirection animationDirection)
     {
-        NavUtils.navigateUpFromSameTask(this);
+        this.finish();
 
         this.overrideAnimation(animationDirection);
     }

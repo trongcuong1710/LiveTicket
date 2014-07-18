@@ -41,6 +41,11 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
      */
     private Button btnManuallInput;
 
+    /**
+     * async task to request API
+     */
+    private RequestAsyncTask requestAsyncTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +105,9 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
 
         if (!TextUtils.isEmpty(decodedString))
         {
+            if (this.requestAsyncTask != null && this.requestAsyncTask.IsBusy())
+                return;
+
             this.requestServer(decodedString);
         }
     }
@@ -204,7 +212,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
         requestParams.add(new BasicNameValuePair(this.getString(R.string.code_request_parameter), decodedString));
         requestParams.add(new BasicNameValuePair(this.getString(R.string.access_token_request_parameter), App.USER_INFO().getAccess_token()));
 
-        RequestAsyncTask requestAsyncTask = new RequestAsyncTask(this.getString(R.string.scan_url), requestParams, null, this);
+        this.requestAsyncTask = new RequestAsyncTask(this.getString(R.string.scan_url), requestParams, null, this);
         requestAsyncTask.execute();
     }
 }

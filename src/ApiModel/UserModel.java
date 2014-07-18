@@ -138,15 +138,13 @@ public class UserModel
      */
     private UserModel()
     {
-        SharedPreferences preferences = SharedPreferenceManager.getPreference(this.SHARE_PREFERENCE_NAME);
-
-        if (preferences != null)
+        if (SharedPreferenceManager.isExist(this.SHARE_PREFERENCE_NAME))
         {
             this.isLogin = true;
-            this.id = SharedPreferenceManager.getString(preferences, this.ID_KEY);
-            this.username = SharedPreferenceManager.getString(preferences, this.USER_NAME_KEY);
-            this.email = SharedPreferenceManager.getString(preferences, this.EMAIL_KEY);
-            this.access_token = SharedPreferenceManager.getString(preferences, this.ACCESS_TOKEN_KEY);
+            this.id = SharedPreferenceManager.getString(this.SHARE_PREFERENCE_NAME, this.ID_KEY);
+            this.username = SharedPreferenceManager.getString(this.SHARE_PREFERENCE_NAME, this.USER_NAME_KEY);
+            this.email = SharedPreferenceManager.getString(this.SHARE_PREFERENCE_NAME, this.EMAIL_KEY);
+            this.access_token = SharedPreferenceManager.getString(this.SHARE_PREFERENCE_NAME, this.ACCESS_TOKEN_KEY);
         }
     }
 
@@ -169,14 +167,9 @@ public class UserModel
      */
     public void Update()
     {
-        SharedPreferences preferences = SharedPreferenceManager.getPreference(this.SHARE_PREFERENCE_NAME);
-
-        if (preferences == null)
-            preferences = SharedPreferenceManager.Create(this.SHARE_PREFERENCE_NAME);
-
-        SharedPreferenceManager.setString(preferences, this.ID_KEY, this.id);
-        SharedPreferenceManager.setString(preferences, this.USER_NAME_KEY, this.username);
-        SharedPreferenceManager.setString(preferences, this.EMAIL_KEY, this.email);
-        SharedPreferenceManager.setString(preferences, this.ACCESS_TOKEN_KEY, this.access_token);
+        SharedPreferenceManager.setString(this.SHARE_PREFERENCE_NAME, this.ID_KEY, this.id);
+        SharedPreferenceManager.setString(this.SHARE_PREFERENCE_NAME, this.USER_NAME_KEY, this.username);
+        SharedPreferenceManager.setString(this.SHARE_PREFERENCE_NAME, this.EMAIL_KEY, this.email);
+        SharedPreferenceManager.setString(this.SHARE_PREFERENCE_NAME, this.ACCESS_TOKEN_KEY, this.access_token);
     }
 }

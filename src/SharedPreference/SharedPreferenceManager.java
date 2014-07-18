@@ -27,31 +27,30 @@ public class SharedPreferenceManager
      */
     public static SharedPreferences getPreference(String name)
     {
-        if (!isExist(name))
-            return null;
-
         return App.getContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
     /**
      * get string from shared preference
-     * @param preferences : share preference to get
+     * @param preferencesName : share preference to get
      * @param name : key name
      * @return
      */
-    public static String getString(SharedPreferences preferences, String name)
+    public static String getString(String preferencesName, String name)
     {
+        SharedPreferences preferences = getPreference(preferencesName);
         return preferences.getString(name, "");
     }
 
     /**
      * set shared preference string value
-     * @param preferences : shared preferences to set
+     * @param preferenceName : shared preferences name
      * @param name : key name
      * @param value : value
      */
-    public static void setString(SharedPreferences preferences, String name, String value)
+    public static void setString(String preferenceName, String name, String value)
     {
+        SharedPreferences preferences = getPreference(preferenceName);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(name, value);
         editor.apply();

@@ -8,12 +8,41 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:id="@+id/invalidLayout"
     tools:context="com.example.liveticket.InvalidActivity">
-
     <TextView
-        android:text="Invalid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewInvalid" />
+        android:text="@string/invalid_title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="@string/button_scan_next_ticket"
+        android:id="@+id/btnScanNext"
+        android:background="@drawable/white_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_message"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignLeft="@+id/btnScanNext" />
 </RelativeLayout>
 <!-- From: file:/E:/SVN/LiveTicket/res/layout/activity_invalid.xml -->

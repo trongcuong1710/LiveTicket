@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import Enum.*;
@@ -16,6 +17,11 @@ public class InvalidActivity extends BaseActivity {
      */
     private RelativeLayout mainLayout;
 
+    /**
+     * scan next button
+     */
+    private Button btnScanNext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,14 @@ public class InvalidActivity extends BaseActivity {
 
         this.mainLayout = (RelativeLayout)this.findViewById(R.id.invalidLayout);
         this.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);
+            }
+        });
+
+        this.btnScanNext = (Button)this.findViewById(R.id.btnScanNext);
+        this.btnScanNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);

@@ -15,11 +15,14 @@
 
     <string name="access_token_request_parameter">access_token</string>
     <string name="app_name">Live Ticket</string>
+    <string name="button_scan_next_ticket">Scan next ticket</string>
     <string name="camera_access_error">Can not access camera.</string>
     <string name="code_edit_text_hint">enter code here</string>
     <string name="code_request_parameter">code</string>
     <string name="common_error_message">An error has occurred, please restart application and try again.</string>
     <string name="common_error_title">Error!</string>
+    <string name="invalid_message">Error message from API response</string>
+    <string name="invalid_title">INVALID</string>
     <string name="login_button_text">Log in</string>
     <string name="login_failed_message">Please check your user name, password and make sure you are connecting to network.</string>
     <string name="login_failed_title">Login Failed!</string>
@@ -46,6 +49,7 @@
     <string name="user_name_edit_text_hint">user name</string>
     <string name="user_name_request_parameter">username</string>
     <string name="user_name_validation_failed_message">Please input user name.</string>
+    <string name="valid_title">VALID</string>
     <string name="validation_failed_title">Validation Failed!</string>
     <!-- From: file:/E:/SVN/LiveTicket/res/values/styles.xml -->
     <eat-comment />

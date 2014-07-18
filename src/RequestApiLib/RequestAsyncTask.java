@@ -9,14 +9,20 @@ import RequestApiLib.RestClient.RequestMethod;
 import android.os.*;
 
 public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult> 
-{	
-	// request url
+{
+    /**
+     * request URL
+     */
 	private String url;
-	
-	// request parameters
+
+    /**
+     * request parameters
+     */
 	private ArrayList<NameValuePair> params;
-	
-	// request header
+
+    /**
+     * request header
+     */
 	private ArrayList<NameValuePair> headers;
 
     /**
@@ -24,6 +30,29 @@ public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult>
      * listen to onPreExecute and onPostExecute
      */
     private IAsyncCallBack listener;
+
+    /**
+     * determine whether async task is running
+     */
+    private boolean isBusy = false;
+
+    /**
+     * get task busy state
+     * @return
+     */
+    public synchronized boolean IsBusy()
+    {
+        return this.isBusy;
+    }
+
+    /**
+     * set task busy state
+     * @param isBusy
+     */
+    public synchronized void setIsBusy(boolean isBusy)
+    {
+        this.isBusy = isBusy;
+    }
 
     /**
      * Constructor
@@ -78,12 +107,14 @@ public class RequestAsyncTask extends AsyncTask<Void, Void, RequestAsyncResult>
     @Override
     protected void onPreExecute()
     {
+        this.setIsBusy(true);
         this.listener.onBeginTask();
     }
 
     @Override
     protected void onPostExecute(RequestAsyncResult result)
     {
+        this.setIsBusy(false);
         this.listener.onTaskComplete(result);
     }
 }

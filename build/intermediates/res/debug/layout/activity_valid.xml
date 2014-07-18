@@ -9,11 +9,31 @@
     android:id="@+id/validLayout"
     tools:context="com.example.liveticket.ValidActivity">
 
-    <TextView
-        android:text="Valid"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewValid" />
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valid_title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="@string/button_scan_next_ticket"
+        android:id="@+id/btnScanNext"
+        android:background="@drawable/white_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/E:/SVN/LiveTicket/res/layout/activity_valid.xml -->
