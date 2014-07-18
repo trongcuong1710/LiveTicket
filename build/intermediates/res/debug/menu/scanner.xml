@@ -3,7 +3,7 @@
     tools:context="com.example.liveticket.ScannerActivity">
     <item android:id="@+id/action_settings"
         android:title="Logout"
-        android:orderInCategory="100"
-        android:showAsAction="never"  />
+        android:orderInCategory="100" />
+        <!--android:showAsAction="never"-->  />
 </menu>
-<!-- From: file:/D:/SVN/LiveTicket/res/menu/scanner.xml -->
+<!-- From: file:/E:/SVN/LiveTicket/res/menu/scanner.xml -->

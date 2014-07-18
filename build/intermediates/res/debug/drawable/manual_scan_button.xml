@@ -3,4 +3,4 @@
     <item android:state_pressed="true"
         android:drawable="@drawable/button_manual_input_pressed" /> <!-- pressed -->
     <item android:drawable="@drawable/button_manual_input" /> <!-- default -->
-</selector><!-- From: file:/D:/SVN/LiveTicket/res/drawable/manual_scan_button.xml -->
+</selector><!-- From: file:/E:/SVN/LiveTicket/res/drawable/manual_scan_button.xml -->

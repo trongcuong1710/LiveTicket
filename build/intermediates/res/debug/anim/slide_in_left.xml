@@ -2,4 +2,4 @@
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
     android:fromXDelta="100%p"
     android:toXDelta="0%p"
-    android:duration="@android:integer/config_longAnimTime" /><!-- From: file:/D:/SVN/LiveTicket/res/anim/slide_in_left.xml -->
+    android:duration="@android:integer/config_longAnimTime" /><!-- From: file:/E:/SVN/LiveTicket/res/anim/slide_in_left.xml -->
