@@ -31,6 +31,7 @@
         <activity
             android:name="com.example.liveticket.ScannerActivity"
             android:label="@string/scanner_activity_title"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/MyAppTheme" >
         </activity>

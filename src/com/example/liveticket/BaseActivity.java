@@ -54,9 +54,11 @@ public abstract class BaseActivity extends Activity
         if (this.loader == null)
         {
             this.loader = new ProgressDialog(BaseActivity.this);
-            this.loader.setTitle(title);
-            this.loader.setMessage(message);
+            this.loader.setCancelable(false);
         }
+
+        this.loader.setTitle(title);
+        this.loader.setMessage(message);
 
         this.loader.show();
     }
@@ -95,6 +97,7 @@ public abstract class BaseActivity extends Activity
     protected void navigateToActivity(Class<?> cls, AnimationDirection animationDirection)
     {
         Intent intent = new Intent(this.getBaseContext(), cls);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
 
         this.overrideAnimation(animationDirection);
@@ -106,7 +109,8 @@ public abstract class BaseActivity extends Activity
      */
     protected void navigateBackToParent(AnimationDirection animationDirection)
     {
-        this.finish();
+        //this.finish();
+        NavUtils.navigateUpFromSameTask(this);
 
         this.overrideAnimation(animationDirection);
     }

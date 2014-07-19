@@ -27,23 +27,23 @@ public class InvalidActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invalid);
 
+        View.OnClickListener onClickListener = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //InvalidActivity.this.navigateToActivity(ScannerActivity.class, AnimationDirection.UP);
+                InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);
+            }
+        };
+
         this.getWindow().getDecorView().setBackgroundColor(Color.rgb(207, 42, 39));
 
         this.mainLayout = (RelativeLayout)this.findViewById(R.id.invalidLayout);
-        this.mainLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);
-            }
-        });
+        this.mainLayout.setOnClickListener(onClickListener);
 
         this.btnScanNext = (Button)this.findViewById(R.id.btnScanNext);
-        this.btnScanNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                InvalidActivity.this.navigateBackToParent(AnimationDirection.UP);
-            }
-        });
+        this.btnScanNext.setOnClickListener(onClickListener);
     }
 
 

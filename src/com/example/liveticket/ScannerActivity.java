@@ -116,7 +116,7 @@ public class ScannerActivity extends BaseActivity implements IPreviewCallback, I
     public void onPause()
     {
         super.onPause();
-        this.frame.removeView(this.cameraManager.getCameraPreview());
+        //this.frame.removeView(this.cameraManager.getCameraPreview());
         this.cameraManager.releaseCamera();
     }
 

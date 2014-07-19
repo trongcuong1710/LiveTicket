@@ -38,31 +38,34 @@ public final class R {
         public static final int button_scan_ticket=0x7f020007;
         public static final int button_scan_ticket_pressed=0x7f020008;
         public static final int ic_launcher=0x7f020009;
-        public static final int launcher=0x7f02000a;
-        public static final int liveticket_logo=0x7f02000b;
-        public static final int manual_scan_button=0x7f02000c;
-        public static final int primary_button=0x7f02000d;
-        public static final int white_button=0x7f02000e;
+        public static final int invalid=0x7f02000a;
+        public static final int launcher=0x7f02000b;
+        public static final int liveticket_logo=0x7f02000c;
+        public static final int manual_scan_button=0x7f02000d;
+        public static final int primary_button=0x7f02000e;
+        public static final int valid=0x7f02000f;
+        public static final int white_button=0x7f020010;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0010;
-        public static final int btnInput=0x7f0a000d;
+        public static final int action_settings=0x7f0a0011;
+        public static final int btnInput=0x7f0a000e;
         public static final int btnLogin=0x7f0a0008;
         public static final int btnLogout=0x7f0a000a;
         public static final int btnScanNext=0x7f0a0003;
         public static final int btnSend=0x7f0a000c;
         public static final int imageView=0x7f0a0002;
         public static final int imageView1=0x7f0a0005;
+        public static final int innerLayout=0x7f0a000d;
         public static final int invalidLayout=0x7f0a0000;
-        public static final int logout=0x7f0a0011;
+        public static final int logout=0x7f0a0012;
         public static final int logoutTextView=0x7f0a0009;
-        public static final int previewFrame=0x7f0a000e;
+        public static final int previewFrame=0x7f0a000f;
         public static final int textView=0x7f0a0001;
         public static final int textView2=0x7f0a0004;
         public static final int txtCode=0x7f0a000b;
         public static final int txtPassword=0x7f0a0007;
         public static final int txtUserName=0x7f0a0006;
-        public static final int validLayout=0x7f0a000f;
+        public static final int validLayout=0x7f0a0010;
     }
     public static final class layout {
         public static final int activity_base=0x7f030000;

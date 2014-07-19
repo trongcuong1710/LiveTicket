@@ -4,6 +4,8 @@ import android.content.*;
 import com.example.liveticket.*;
 import java.io.*;
 
+import util.FileUtil;
+
 /**
  * Created by DFS on 7/15/2014.
  */
@@ -68,7 +70,7 @@ public class SharedPreferenceManager
             return;
 
         preferences.edit().clear().commit();
-        deleteFile("/data/data/" + App.getContext().getPackageName() +  "/shared_prefs/"  + name + ".xml");
+        FileUtil.deleteFile("/data/data/" + App.getContext().getPackageName() +  "/shared_prefs/"  + name + ".xml");
     }
 
     /**
@@ -81,17 +83,5 @@ public class SharedPreferenceManager
         return App.getContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
-    /**
-     * delete file
-     * @param pathToFile
-     * @throws IOException
-     */
-    private static void deleteFile(String pathToFile) {
-        File file = new File(pathToFile);
-        if (file.delete() == false) {
-            return;
-        }
 
-        file.delete();
-    }
 }

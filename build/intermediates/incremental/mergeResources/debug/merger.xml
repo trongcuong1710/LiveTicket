@@ -59,6 +59,11 @@
                 qualifiers=""
                 type="drawable" />
             <file
+                name="white_button"
+                path="E:\SVN\LiveTicket\res\drawable\white_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_logout"
                 path="E:\SVN\LiveTicket\res\drawable-hdpi\button_logout.9.png"
                 qualifiers="hdpi-v4"
@@ -104,6 +109,11 @@
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="invalid"
+                path="E:\SVN\LiveTicket\res\drawable-hdpi\invalid.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="launcher"
                 path="E:\SVN\LiveTicket\res\drawable-hdpi\launcher.png"
                 qualifiers="hdpi-v4"
@@ -111,6 +121,11 @@
             <file
                 name="liveticket_logo"
                 path="E:\SVN\LiveTicket\res\drawable-hdpi\liveticket_logo.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="valid"
+                path="E:\SVN\LiveTicket\res\drawable-hdpi\valid.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -159,6 +174,11 @@
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
+                name="invalid"
+                path="E:\SVN\LiveTicket\res\drawable-mdpi\invalid.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="launcher"
                 path="E:\SVN\LiveTicket\res\drawable-mdpi\launcher.png"
                 qualifiers="mdpi-v4"
@@ -166,6 +186,11 @@
             <file
                 name="liveticket_logo"
                 path="E:\SVN\LiveTicket\res\drawable-mdpi\liveticket_logo.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="valid"
+                path="E:\SVN\LiveTicket\res\drawable-mdpi\valid.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
@@ -214,6 +239,11 @@
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="invalid"
+                path="E:\SVN\LiveTicket\res\drawable-xhdpi\invalid.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="launcher"
                 path="E:\SVN\LiveTicket\res\drawable-xhdpi\launcher.png"
                 qualifiers="xhdpi-v4"
@@ -221,6 +251,11 @@
             <file
                 name="liveticket_logo"
                 path="E:\SVN\LiveTicket\res\drawable-xhdpi\liveticket_logo.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="valid"
+                path="E:\SVN\LiveTicket\res\drawable-xhdpi\valid.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
@@ -269,6 +304,11 @@
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="invalid"
+                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\invalid.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="launcher"
                 path="E:\SVN\LiveTicket\res\drawable-xxhdpi\launcher.png"
                 qualifiers="xxhdpi-v4"
@@ -276,6 +316,11 @@
             <file
                 name="liveticket_logo"
                 path="E:\SVN\LiveTicket\res\drawable-xxhdpi\liveticket_logo.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="valid"
+                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\valid.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
@@ -399,9 +444,9 @@
                 </string>
                 <string name="invalid_message" >Error message from API response
                 </string>
-                <string name="password_request_parameter" >password
-                </string>
                 <string name="send_button_text" >Send
+                </string>
+                <string name="password_request_parameter" >password
                 </string>
                 <string name="login_loader_message" >Please wait while server validating your information!
                 </string>
@@ -565,11 +610,6 @@
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
-            <file
-                name="white_button"
-                path="E:\SVN\LiveTicket\res\drawable\white_button.xml"
-                qualifiers=""
-                type="drawable" />
         </source>
         <source path="E:\SVN\LiveTicket\build\generated\res\rs\debug" />
         <source path="E:\SVN\LiveTicket\build\generated\res\generated\debug" />

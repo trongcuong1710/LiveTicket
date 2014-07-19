@@ -32,6 +32,7 @@
             android:name=".ScannerActivity"
             android:label="@string/scanner_activity_title"
             android:screenOrientation="portrait"
+            android:launchMode="singleTop"
             android:theme="@style/MyAppTheme">
         </activity>
         <activity
