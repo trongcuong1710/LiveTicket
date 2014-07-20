@@ -37,14 +37,15 @@ public final class R {
         public static final int button_primary_pressed=0x7f020006;
         public static final int button_scan_ticket=0x7f020007;
         public static final int button_scan_ticket_pressed=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int invalid=0x7f02000a;
-        public static final int launcher=0x7f02000b;
-        public static final int liveticket_logo=0x7f02000c;
-        public static final int manual_scan_button=0x7f02000d;
-        public static final int primary_button=0x7f02000e;
-        public static final int valid=0x7f02000f;
-        public static final int white_button=0x7f020010;
+        public static final int flash_image=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int invalid=0x7f02000b;
+        public static final int launcher=0x7f02000c;
+        public static final int liveticket_logo=0x7f02000d;
+        public static final int manual_scan_button=0x7f02000e;
+        public static final int primary_button=0x7f02000f;
+        public static final int valid=0x7f020010;
+        public static final int white_button=0x7f020011;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0011;

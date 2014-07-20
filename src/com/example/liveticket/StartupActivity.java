@@ -1,15 +1,18 @@
 package com.example.liveticket;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.liveticket.R;
+import Enum.*;
 
 import ApiModel.UserModel;
 
-public class StartupActivity extends Activity {
+public class StartupActivity extends BaseActivity {
+    /**
+     * delayed time before start next activity
+     */
+    private long delayed = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +22,15 @@ public class StartupActivity extends Activity {
 
         if (user.isLogin())
         {
-            Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
-            startActivity(intent);
+            this.handle(ScannerActivity.class);
+            /*Intent intent = new Intent(getBaseContext(), ScannerActivity.class);
+            startActivity(intent);*/
         }
         else
         {
-            Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-            startActivity(intent);
+            this.handle(LoginActivity.class);
+            /*Intent intent = new Intent(getBaseContext(), LoginActivity.class);
+            startActivity(intent);*/
         }
     }
 
@@ -47,5 +52,21 @@ public class StartupActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * create a new handler
+     * @param cls
+     */
+    private void handle(Class<?> cls)
+    {
+        final Class<?> clss = cls;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                navigateToActivity(clss, AnimationDirection.LEFT);
+                finish();
+            }
+        }, this.delayed);
     }
 }
