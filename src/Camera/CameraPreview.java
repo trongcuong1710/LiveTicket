@@ -27,6 +27,16 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private IPreviewCallback listener;
 
     /**
+     * determine whether preview is running
+     */
+    private boolean isPreviewRunning;
+
+    /**
+     * context which camera's running on
+     */
+    private Context context;
+
+    /**
      * constructor
      * @param context : activity context
      * @param camera : camera
@@ -108,5 +118,34 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         };
 
         this.camera.setPreviewCallback(previewCallback);
+    }
+
+    /**
+     * set camera rotation
+     */
+    private void setPreviewRotation(int width, int height)
+    {
+        if (this.isPreviewRunning)
+        {
+            try
+            {
+                this.camera.stopPreview();
+            }
+            catch (Exception e)
+            {
+                /**
+                 * attemp to stop camera preview
+                 */
+            }
+        }
+
+        Camera.Parameters parameters = this.camera.getParameters();
+        Display display = ((WindowManager)this.context.getSystemService(this.context.WINDOW_SERVICE)).getDefaultDisplay();
+
+        switch (display.getRotation())
+        {
+            case Surface.ROTATION_0:
+                parameters.setPreviewSize();
+        }
     }
 }

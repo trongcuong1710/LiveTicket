@@ -2,415 +2,435 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="E:\SVN\LiveTicket\res" >
+        <source path="D:\SVN\LiveTicket\res" >
             <file
                 name="slide_in_down"
-                path="E:\SVN\LiveTicket\res\anim\slide_in_down.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_down.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_in_left"
-                path="E:\SVN\LiveTicket\res\anim\slide_in_left.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_left.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_in_right"
-                path="E:\SVN\LiveTicket\res\anim\slide_in_right.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_right.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_in_up"
-                path="E:\SVN\LiveTicket\res\anim\slide_in_up.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_in_up.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_out_down"
-                path="E:\SVN\LiveTicket\res\anim\slide_out_down.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_down.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_out_left"
-                path="E:\SVN\LiveTicket\res\anim\slide_out_left.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_left.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_out_right"
-                path="E:\SVN\LiveTicket\res\anim\slide_out_right.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_right.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="slide_out_up"
-                path="E:\SVN\LiveTicket\res\anim\slide_out_up.xml"
+                path="D:\SVN\LiveTicket\res\anim\slide_out_up.xml"
                 qualifiers=""
                 type="anim" />
             <file
                 name="alert_button"
-                path="E:\SVN\LiveTicket\res\drawable\alert_button.xml"
+                path="D:\SVN\LiveTicket\res\drawable\alert_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="manual_scan_button"
-                path="E:\SVN\LiveTicket\res\drawable\manual_scan_button.xml"
+                path="D:\SVN\LiveTicket\res\drawable\manual_scan_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="primary_button"
-                path="E:\SVN\LiveTicket\res\drawable\primary_button.xml"
+                path="D:\SVN\LiveTicket\res\drawable\primary_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="white_button"
-                path="E:\SVN\LiveTicket\res\drawable\white_button.xml"
+                path="D:\SVN\LiveTicket\res\drawable\white_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="button_logout"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_logout.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_logout.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_logout_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_logout_pressed.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_manual_input.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_manual_input.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_manual_input_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_manual_input_pressed.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_primary.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_primary.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_primary_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_primary_pressed.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_scan_ticket.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_scan_ticket.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\button_scan_ticket_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\button_scan_ticket_pressed.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="flash_image"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\flash_image.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\ic_launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="invalid"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\invalid.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\invalid.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="launcher"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="liveticket_logo"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\liveticket_logo.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\liveticket_logo.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="valid"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\valid.png"
+                path="D:\SVN\LiveTicket\res\drawable-hdpi\valid.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_logout.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_logout.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_logout_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_logout_pressed.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_manual_input.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_manual_input.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_manual_input_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_manual_input_pressed.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_primary.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_primary.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_primary_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_primary_pressed.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_scan_ticket.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_scan_ticket.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\button_scan_ticket_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\button_scan_ticket_pressed.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="flash_image"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\flash_image.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\ic_launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\ic_launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="invalid"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\invalid.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\invalid.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="launcher"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="liveticket_logo"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\liveticket_logo.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\liveticket_logo.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="valid"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\valid.png"
+                path="D:\SVN\LiveTicket\res\drawable-mdpi\valid.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_logout.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_logout.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_logout_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_logout_pressed.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_manual_input.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_manual_input.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_manual_input_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_manual_input_pressed.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_primary.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_primary.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_primary_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_primary_pressed.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_scan_ticket.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_scan_ticket.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\button_scan_ticket_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\button_scan_ticket_pressed.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="flash_image"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\flash_image.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\ic_launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\ic_launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="invalid"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\invalid.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\invalid.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="launcher"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="liveticket_logo"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\liveticket_logo.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\liveticket_logo.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="valid"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\valid.png"
+                path="D:\SVN\LiveTicket\res\drawable-xhdpi\valid.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_logout.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_logout.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_logout_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_logout_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_logout_pressed.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_manual_input.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_manual_input.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_manual_input_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_manual_input_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_manual_input_pressed.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_primary.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_primary.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_primary_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_primary_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_primary_pressed.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_scan_ticket.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_scan_ticket.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="button_scan_ticket_pressed"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\button_scan_ticket_pressed.9.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\button_scan_ticket_pressed.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="flash_image"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\flash_image.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\ic_launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="invalid"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\invalid.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\invalid.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="launcher"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\launcher.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="liveticket_logo"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\liveticket_logo.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\liveticket_logo.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="valid"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\valid.png"
+                path="D:\SVN\LiveTicket\res\drawable-xxhdpi\valid.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="activity_base"
-                path="E:\SVN\LiveTicket\res\layout\activity_base.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_base.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_invalid"
-                path="E:\SVN\LiveTicket\res\layout\activity_invalid.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_invalid.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_login"
-                path="E:\SVN\LiveTicket\res\layout\activity_login.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_login.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_logout"
-                path="E:\SVN\LiveTicket\res\layout\activity_logout.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_logout.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_manual_input"
-                path="E:\SVN\LiveTicket\res\layout\activity_manual_input.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_manual_input.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_scanner"
-                path="E:\SVN\LiveTicket\res\layout\activity_scanner.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_scanner.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_startup"
-                path="E:\SVN\LiveTicket\res\layout\activity_startup.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_startup.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_valid"
-                path="E:\SVN\LiveTicket\res\layout\activity_valid.xml"
+                path="D:\SVN\LiveTicket\res\layout\activity_valid.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="base"
-                path="E:\SVN\LiveTicket\res\menu\base.xml"
+                path="D:\SVN\LiveTicket\res\menu\base.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="invalid"
-                path="E:\SVN\LiveTicket\res\menu\invalid.xml"
+                path="D:\SVN\LiveTicket\res\menu\invalid.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="login"
-                path="E:\SVN\LiveTicket\res\menu\login.xml"
+                path="D:\SVN\LiveTicket\res\menu\login.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="logout"
-                path="E:\SVN\LiveTicket\res\menu\logout.xml"
+                path="D:\SVN\LiveTicket\res\menu\logout.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="manual_input"
-                path="E:\SVN\LiveTicket\res\menu\manual_input.xml"
+                path="D:\SVN\LiveTicket\res\menu\manual_input.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="scanner"
-                path="E:\SVN\LiveTicket\res\menu\scanner.xml"
+                path="D:\SVN\LiveTicket\res\menu\scanner.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="startup"
-                path="E:\SVN\LiveTicket\res\menu\startup.xml"
+                path="D:\SVN\LiveTicket\res\menu\startup.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="valid"
-                path="E:\SVN\LiveTicket\res\menu\valid.xml"
+                path="D:\SVN\LiveTicket\res\menu\valid.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="E:\SVN\LiveTicket\res\values\colors_apptheme.xml"
+                path="D:\SVN\LiveTicket\res\values\colors_apptheme.xml"
                 qualifiers="" >
                 <color name="apptheme_color" >#99cc00
                 </color>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values\dimens.xml"
+                path="D:\SVN\LiveTicket\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -418,17 +438,17 @@
                 </dimen>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values\strings.xml"
+                path="D:\SVN\LiveTicket\res\values\strings.xml"
                 qualifiers="" >
                 <string name="login_loader_title" >Login....!
                 </string>
                 <string name="user_name_edit_text_hint" >user name
                 </string>
-                <string name="user_name_request_parameter" >username
+                <string name="manual_input_activity_title" >Enter Code
                 </string>
                 <string name="logout_button_text" >Log out
                 </string>
-                <string name="manual_input_activity_title" >Enter Code
+                <string name="user_name_request_parameter" >username
                 </string>
                 <string name="scanner_button_text" >Enter Code Manually
                 </string>
@@ -438,9 +458,9 @@
                 </string>
                 <string name="login_url" >https://sss-mobile-test.herokuapp.com/login
                 </string>
-                <string name="logout_textview_content" >Log in as: 
-                </string>
                 <string name="login_failed_message" >Please check your user name, password and make sure you are connecting to network.
+                </string>
+                <string name="logout_textview_content" >Log in as: 
                 </string>
                 <string name="invalid_message" >Error message from API response
                 </string>
@@ -474,19 +494,19 @@
                 </string>
                 <string name="logout_activity_title" >Log out
                 </string>
-                <string name="user_name_validation_failed_message" >Please input user name.
-                </string>
                 <string name="login_failed_title" >Login Failed!
                 </string>
-                <string name="common_error_message" >An error has occurred, please restart application and try again.
+                <string name="user_name_validation_failed_message" >Please input user name.
                 </string>
                 <string name="password_validation_failed_message" >Please input user name.
                 </string>
+                <string name="common_error_message" >An error has occurred, please restart application and try again.
+                </string>
                 <string name="code_request_parameter" >code
                 </string>
-                <string name="app_name" >Live Ticket
-                </string>
                 <string name="login_button_text" >Log in
+                </string>
+                <string name="app_name" >Live Ticket
                 </string>
                 <string name="access_token_request_parameter" >access_token
                 </string>
@@ -498,7 +518,7 @@
                 </string>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values\styles.xml"
+                path="D:\SVN\LiveTicket\res\values\styles.xml"
                 qualifiers="" >
 
                 <style
@@ -520,7 +540,7 @@
                 </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values\themes.xml"
+                path="D:\SVN\LiveTicket\res\values\themes.xml"
                 qualifiers="" >
 
                 <style
@@ -541,7 +561,7 @@
                 </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values-v11\styles.xml"
+                path="D:\SVN\LiveTicket\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -552,7 +572,7 @@
                 </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values-v11\themes.xml"
+                path="D:\SVN\LiveTicket\res\values-v11\themes.xml"
                 qualifiers="v11" >
 
                 <style
@@ -573,7 +593,7 @@
                 </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values-v14\styles.xml"
+                path="D:\SVN\LiveTicket\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -584,7 +604,7 @@
                 </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values-v14\themes.xml"
+                path="D:\SVN\LiveTicket\res\values-v14\themes.xml"
                 qualifiers="v14" >
 
                 <style
@@ -595,47 +615,27 @@
                 </style>
 
                 <style
-                    name="NoActionBar"
-                    parent="@android:style/Theme.Holo.Light.NoActionBar" >
-                </style>
-
-                <style
                     name="MyAppTheme.Fullscreen"
                     parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
                 </style>
+
+                <style
+                    name="NoActionBar"
+                    parent="@android:style/Theme.Holo.Light.NoActionBar" >
+                </style>
             </file>
             <file
-                path="E:\SVN\LiveTicket\res\values-w820dp\dimens.xml"
+                path="D:\SVN\LiveTicket\res\values-w820dp\dimens.xml"
                 qualifiers="w820dp-v13" >
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
-            <file
-                name="flash_image"
-                path="E:\SVN\LiveTicket\res\drawable-xxhdpi\flash_image.png"
-                qualifiers="xxhdpi-v4"
-                type="drawable" />
-            <file
-                name="flash_image"
-                path="E:\SVN\LiveTicket\res\drawable-hdpi\flash_image.png"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="flash_image"
-                path="E:\SVN\LiveTicket\res\drawable-xhdpi\flash_image.png"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
-            <file
-                name="flash_image"
-                path="E:\SVN\LiveTicket\res\drawable-mdpi\flash_image.png"
-                qualifiers="mdpi-v4"
-                type="drawable" />
         </source>
-        <source path="E:\SVN\LiveTicket\build\generated\res\rs\debug" />
-        <source path="E:\SVN\LiveTicket\build\generated\res\generated\debug" />
+        <source path="D:\SVN\LiveTicket\build\generated\res\rs\debug" />
+        <source path="D:\SVN\LiveTicket\build\generated\res\generated\debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="E:\SVN\LiveTicket\build-types\debug\res" />
+        <source path="D:\SVN\LiveTicket\build-types\debug\res" />
     </dataSet>
 
 </merger>
