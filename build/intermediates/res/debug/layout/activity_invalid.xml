@@ -47,4 +47,4 @@
         android:layout_below="@+id/imageView"
         android:gravity="center"/>
 </RelativeLayout>
-<!-- From: file:/E:/SVN/LiveTicket/res/layout/activity_invalid.xml -->
+<!-- From: file:/D:/SVN/LiveTicket/res/layout/activity_invalid.xml -->
